@@ -1,4 +1,9 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "excelFormatDIMData"
+'
+' Change the file path in this location to one that you use.
+'
+
+Public Const fldrTarget As String = "C:\temp\"
 Sub fixWeapons()
 '
 ' The Main Routine
@@ -15,10 +20,7 @@ ActiveWindow.FreezePanes = True
 ds = mkDate()
 fn = ds + "-destinyWeapons.xlsx"
 
-'
-' Change the file path in this location to one that you use.
-'
-filePath = "C:\temp\" + fn
+filePath = fldrTarget + fn
 
 ActiveWorkbook.SaveAs Filename:= _
         filePath _
@@ -42,10 +44,7 @@ ActiveWindow.FreezePanes = True
 ds = mkDate()
 fn = ds + "-destinyArmor.xlsx"
 
-'
-' Change the file path in this location to one that you use.
-'
-filePath = "C:\temp\" + fn
+filePath = fldrTarget + fn
 
 ActiveWorkbook.SaveAs Filename:= _
         filePath _
